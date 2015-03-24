@@ -1,5 +1,6 @@
 # Victor.esp8266Docker
-A docker file and espmake comand to compile code using the working dir
+A docker file and espmake comand to compile code using the current dir.
+Based on esp-open-sdk, https://github.com/pfalcon/esp-open-sdk.git
 
 
 ## Build docker container
@@ -42,7 +43,8 @@ Sample output:
 	FW firmware/0x00000.bin
 	FW firmware/0x40000.bin
 
-
-Flash with esptool.py
+Flash with esptool.py 
 
 	esptool.py --port /dev/ttyUSB0 write_flash 0x00000 0x00000.bin
+	esptool.py --port /dev/ttyUSB0 write_flash 0x40000 0x40000.bin
+
