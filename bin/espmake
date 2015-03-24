@@ -1,0 +1,2 @@
+PORT=/dev/ttyUSB0
+docker run --privileged -e "BUILDCMD=make" -e "BUILDARG=$1"  -v=$PORT:/dev/tty-from-host -i -t -v $(pwd):/opt/Espressif/source esp8266 
